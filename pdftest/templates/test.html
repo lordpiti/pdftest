@@ -1,15 +1,16 @@
-<html>
 <body>
-    <div class="pagetitle">{{Firstname}}</div>
+    <div class="pagetitle">{{pagetitle}}</div>
     <ul id="products">
         {% for product in products %}
         <li>
-            <h2>{{product.name}}</h2>
-            Only {{product.price | price }}
-
-            {{product.description | prettyprint | paragraph }}
+            <div class="item-header">{{product.name}}</div>
+            <div>
+                Only {{product.price | price }}
+            </div>
+            <div>
+                {{product.description | prettyprint | paragraph }}
+            </div>
         </li>
         {% endfor %}
     </ul>
 </body>
-</html>

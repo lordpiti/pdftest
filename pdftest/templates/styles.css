@@ -4,5 +4,9 @@ body {
 
 .pagetitle {
     color: blue;
-    font-size: 20px
+    font-size: 50px
+}
+
+.item-header {
+    font-size: 20px;
 }
