@@ -11,7 +11,7 @@ namespace pdftest.PdfRenderers
             using var page2 = await browser2.NewPageAsync();
             await page2.SetContentAsync(htmlContent);
             await page2.AddStyleTagAsync(new AddTagOptions { Path = cssFilePath }); // also possible to inject the css string
-            await page2.PdfAsync($"{outputFilename}-puppeteersharp.pdf");
+            await page2.PdfAsync($"{outputFilename}-puppeteersharp.pdf", new PdfOptions { PrintBackground = true });
         }
     }
 }
