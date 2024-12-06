@@ -1,13 +1,8 @@
 ﻿using DotLiquid;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace pdftest.LiquidParsers
 {
-    internal class DotLIquidParser
+    public class DotLIquidParser
     {
         public string Parse(string htmlStr, object model)
         {

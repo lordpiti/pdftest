@@ -1,8 +1,9 @@
 ﻿using PuppeteerSharp;
+using System.Threading.Tasks;
 
 namespace pdftest.PdfRenderers
 {
-    internal class PuppeteerService
+    public class PuppeteerService
     {
         public async Task Generate(string htmlContent, string cssFilePath, string outputFilename)
         {

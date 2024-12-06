@@ -3,7 +3,6 @@
     flex-wrap: wrap; /* Allows wrapping to create rows */
     width: 300px; /* Total width of the grid */
     margin: 0 auto; /* Center the grid horizontally */
-    background-color: blue;
 }
 
 /* Style for grid cells */
@@ -18,5 +17,4 @@
     color: white;
     font-weight: bold;
     text-shadow: 1px 1px 2px black;
-    background-color: blue;
 }

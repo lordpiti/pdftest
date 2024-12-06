@@ -4,7 +4,7 @@ using TheArtOfDev.HtmlRenderer.PdfSharp;
 
 namespace pdftest.PdfRenderers
 {
-    internal class PdfSharpService
+    public class PdfSharpService
     {
         public void Generate(string htmlContent, string cssContent, string outputFilename)
         {

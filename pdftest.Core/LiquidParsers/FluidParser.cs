@@ -1,13 +1,9 @@
 ﻿using Fluid;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace pdftest.LiquidParsers
 {
-    internal class FluentParser
+    public class FluidParser
     {
         public string Parse(string htmlStr, object model)
         {
@@ -17,7 +13,7 @@ namespace pdftest.LiquidParsers
             };
             //options.MemberAccessStrategy.Register<Product>();
 
-            var parser = new FluidParser();
+            var parser = new Fluid.FluidParser();
             if (parser.TryParse(htmlStr, out var template, out var error))
             {
                 var context = new TemplateContext(model, options);

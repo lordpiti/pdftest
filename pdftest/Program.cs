@@ -3,7 +3,7 @@ using pdftest.LiquidParsers;
 using pdftest.PdfRenderers;
 
 var dotLiquidParser = new DotLIquidParser();
-var fluentParser = new FluentParser();
+var fluidParser = new FluidParser();
 var pdfServicePdfSharp = new PdfSharpService();
 var pdfServicePuppeteer = new PuppeteerService();
 
@@ -14,14 +14,14 @@ var htmlStr = File.ReadAllText(@"templates\test.html");
 
 List<Product> productList = [
     new Product {
-        description = "the best product",
-        name = "Product 1",
-        price = 30 
+        Description = "the best product",
+        Name = "Product 1",
+        Price = 30 
     },
     new Product {
-        description = "the worst product",
-        name = "Product 2",
-        price = 10
+        Description = "the worst product",
+        Name = "Product 2",
+        Price = 10
     }];
 var model = new { products = productList, pagetitle = "Test Page" };
 
@@ -31,7 +31,7 @@ pdfServicePdfSharp.Generate(htmlContent, cssStr, "example-DotLiquid");
 await pdfServicePuppeteer.Generate(htmlContent, "templates/styles.css", "example-DotLiquid");
 
 // Fluid example
-var parsedHtml = fluentParser.Parse(htmlStr, model);
+var parsedHtml = fluidParser.Parse(htmlStr, model);
 pdfServicePdfSharp.Generate(parsedHtml, cssStr, "example-Fluid");
 await pdfServicePuppeteer.Generate(parsedHtml, "templates/styles.css", "example-Fluid");
 

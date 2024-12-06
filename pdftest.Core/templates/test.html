@@ -3,12 +3,12 @@
     <ul id="products">
         {% for product in products %}
         <li>
-            <div class="item-header">{{product.name}}</div>
+            <div class="item-header">{{product.Name}}</div>
             <div>
-                Only {{product.price | price }}
+                Only {{product.price | Price }}
             </div>
             <div>
-                {{product.description | prettyprint | paragraph }}
+                {{product.Description | prettyprint | paragraph }}
             </div>
         </li>
         {% endfor %}
