@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Select.HtmlToPdf.NetCore" Version="24.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\pdftest.Core\pdftest.Core.csproj" />
   </ItemGroup>
 
